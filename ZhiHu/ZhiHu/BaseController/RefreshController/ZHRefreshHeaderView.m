@@ -279,7 +279,7 @@
     [super prepare];
     
     // 设置控件的高度
-    self.mj_h = 50;
+    self.mj_h = 30;
 
     // logo
     NSBundle *refreshBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[MJRefreshComponent class]] pathForResource:@"MJRefresh" ofType:@"bundle"]];
@@ -303,6 +303,8 @@
 
     self.logo.bounds = CGRectMake(0, 0, self.mj_h, self.mj_h);
     self.logo.center = CGPointMake((self.bounds.size.width-self.mj_h*0.5)*0.5, self.mj_h * 0.5);
+    self.logo.layer.cornerRadius = self.mj_h * 0.5;
+    self.logo.layer.masksToBounds = YES;
     self.pieProgressView.frame = CGRectMake(0, 0, self.logo.frame.size.width, self.logo.frame.size.height);
 }
 
@@ -324,7 +326,9 @@
 #pragma mark - Private Methods
 
 - (void)updatePieForAngle:(CGFloat)degrees {
-    [self.pieProgressView setProgress:degrees];
+    if (degrees >= 0.25) {
+        [self.pieProgressView setProgress:degrees-0.25];
+    }
 }
 
 #pragma mark 监听scrollView的contentSize改变
@@ -402,6 +406,7 @@
     self.logo.hidden = YES;
     [layer removeAllAnimations];
     self.logo.hidden = NO;
+    [self.pieProgressView setProgress:0.0];
     self.pieProgressView.hidden = NO;
 }
 
