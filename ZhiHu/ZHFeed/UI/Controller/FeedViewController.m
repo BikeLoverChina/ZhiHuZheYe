@@ -11,6 +11,7 @@
 #import "ZHRefreshTableViewController.h"
 #import "ZHConstants.h"
 #import "FeedListService.h"
+#import "SDAutoLayout.h"
 
 #define CONTENTINSET_BOTTOM 45
 #define CONTENTINSET_TOP    44
@@ -18,7 +19,8 @@
 @interface FeedViewController () <UISearchBarDelegate, BaseServiceDelegate>
 
 @property (nonatomic, strong) NSMutableArray  *dataArray;
-@property (nonatomic, strong) UISearchBar     *searchBar;
+@property (nonatomic, strong) UIView          *searchBgView;
+@property (nonatomic, strong) UIButton        *searchButton;
 @property (nonatomic, strong) FeedListService *feedListService;
 
 @end
@@ -56,34 +58,22 @@
 
 - (void)initSearchView
 {
-    [self setupSearchBar];
+    self.searchBgView = [[UIView alloc] initWithFrame:CGRectMake(0, IOS7_STATUS_BAR_HEGHT, SCREEN_WIDTH, 44)];
+    self.searchButton = [[UIButton alloc] init];
+    [self.searchBgView addSubview:self.searchButton];
+    [self.searchButton addTarget:self action:@selector(searchButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+//    self.searchBar.placeholder = @"搜索问答、文章、话题、或用户";
+    [self.view addSubview:self.searchBgView];
 }
 
-- (void)setupSearchBar{
-    
-    self.searchBar = [[UISearchBar alloc]init];
-    
-    self.searchBar.frame = CGRectMake(0, IOS7_STATUS_BAR_HEGHT, SCREEN_WIDTH, 44);
-    self.searchBar.delegate = self;
-    self.searchBar.placeholder = @"搜索问答、文章、话题、或用户";
-//    [self.view addSubview:self.searchBar];
+#pragma mark- Click
+
+- (void)searchButtonClick:(id)sender
+{
     
 }
 
-#pragma mark -UISearchBarDelegate
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    [UIView animateWithDuration:0.5 animations:^{
-        //1.
-//        self.navigationController.navigationBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
-//        self.searchBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
-        
-        //2.
-//        self.searchBar.showsCancelButton = YES;
-//        [self setupCancelButton];
-        
-//        [self.popView showThePopViewWithArray:self.titleArray];
-    }];
-}
+#pragma mark- 网络请求相关
 
 - (void)pullUpdateTriggering:(MJRefreshComponent *)sender type:(PULLVIEW_TYPE)aType
 {

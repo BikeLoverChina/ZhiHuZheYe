@@ -39,4 +39,15 @@
  */
 - (UIColor *)colorWithColorKey:(NSString *)key;
 
+/**
+ *  @method:根据字体key返回对应的字体
+ *
+ *  @param nameKey 字体key
+ *
+ *  @param sizeKey 大小key
+ *
+ *  @return 返回的字体
+ */
+- (UIFont *)fontForNameKey:(NSString*)nameKey sizeKey:(NSString *)sizeKey;
+
 @end

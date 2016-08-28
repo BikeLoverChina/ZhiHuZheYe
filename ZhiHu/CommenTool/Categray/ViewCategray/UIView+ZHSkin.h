@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (ZHSkin)
+
+/*!
+ *  backgroundColor
+ */
+@property (nonatomic, copy) NSString *backgroundColorKey;
+
+/*!
+ *  self.layer.borderColor
+ */
+@property (nonatomic, copy) NSString *borderColorKey;
 /**
  *	裁剪后的图片
  *  默认所有backgroundColor直取最顶层父视图的backgroundColor，通常已经满足条件了。如果不能满，请手动指定背景颜色

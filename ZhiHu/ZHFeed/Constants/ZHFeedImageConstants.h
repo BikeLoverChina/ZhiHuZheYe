@@ -15,5 +15,7 @@
 
 #define ZHSearchHistoryIcon            (@"ZHSearchHistoryIcon")
 #define Night_ZHSearchHistoryIcon      (@"Night_ZHSearchHistoryIcon")
+#define Night_Search_Highlight         (@"Night_Search_Highlight")
+#define Night_Search_Normal            (@"Night_Search_Normal")
 
 #endif /* ZHFeedImageConstants_h */

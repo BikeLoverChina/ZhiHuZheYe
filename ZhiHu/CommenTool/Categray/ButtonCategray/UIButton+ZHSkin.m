@@ -8,8 +8,24 @@
 
 #import "UIButton+ZHSkin.h"
 #import "ZHSkinManager.h"
+#import <objc/runtime.h>
+
+#define ADD_DYNAMIC_PROPERTY(PROPERTY_TYPE,PROPERTY_NAME,SETTER_NAME) \
+@dynamic PROPERTY_NAME; \
+static char kProperty##PROPERTY_NAME; \
+- ( PROPERTY_TYPE ) PROPERTY_NAME { \
+return ( PROPERTY_TYPE ) objc_getAssociatedObject(self, &(kProperty##PROPERTY_NAME ) ); \
+} \
+- (void) SETTER_NAME :( PROPERTY_TYPE ) PROPERTY_NAME { \
+objc_setAssociatedObject(self, &kProperty##PROPERTY_NAME , PROPERTY_NAME , OBJC_ASSOCIATION_RETAIN_NONATOMIC); \
+}
 
 @implementation UIButton (ZHSkin)
+
+ADD_DYNAMIC_PROPERTY(NSString *, titleColorNormalKey, setTitleColorNormalKey);
+ADD_DYNAMIC_PROPERTY(NSString *, titleColorSelectedKey, setTitleColorSelectedKey);
+ADD_DYNAMIC_PROPERTY(NSString *, titleColorHighlightedKey, setTitleColorHighlightedKey);
+
 
 - (void)setBackgroundImageKey:(NSString *)key forState:(UIControlState)state
 {
@@ -28,7 +44,40 @@
 
 - (void)setTitleColorKey:(NSString *)key forState:(UIControlState)state
 {
-    
+    [self changeTitleColorKey:key forState:state];
+}
+
+- (void)changeTitleColorKey:(NSString *)key forState:(UIControlState)state
+{
+    if (key) {
+        
+        switch (state)
+        {
+            case UIControlStateNormal:
+                if (self.titleColorNormalKey != key)
+                {
+                    self.titleColorNormalKey = key;
+                }
+                break;
+                
+            case UIControlStateHighlighted:
+                if (self.titleColorHighlightedKey != key) {
+                    self.titleColorHighlightedKey = key;
+                }
+                break;
+                
+            case UIControlStateSelected:
+                if (self.titleColorSelectedKey != key)
+                {
+                    self.titleColorSelectedKey = key;
+                }
+                break;
+                
+            default:
+                break;
+        }
+        [self setTitleColor:[[ZHSkinManager sharedManager] colorWithColorKey:key] forState:state];
+    }
 }
 
 - (UIImage *)imageWithColorKey:(NSString *)colorKey andSize:(CGSize)aSize {

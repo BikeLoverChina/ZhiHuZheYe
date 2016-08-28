@@ -11,6 +11,13 @@
 @interface UIButton (ZHSkin)
 
 /*!
+ *  不同状态的 titleColor
+ */
+@property (nonatomic, copy, readonly) NSString          *titleColorNormalKey;
+@property (nonatomic, copy, readonly) NSString          *titleColorSelectedKey;
+@property (nonatomic, copy, readonly) NSString          *titleColorHighlightedKey;
+
+/*!
  *  设置 backgroundImage
  */
 - (void)setBackgroundImageKey:(NSString *)key forState:(UIControlState)state;

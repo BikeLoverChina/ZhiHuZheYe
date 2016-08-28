@@ -92,8 +92,6 @@
 		182D12CD1D44A44A00965ED1 /* dropdown_loading_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182D128F1D44A44A00965ED1 /* dropdown_loading_03@2x.png */; };
 		182D12D01D44A49900965ED1 /* ZHRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D12CF1D44A49900965ED1 /* ZHRefreshHeaderView.m */; };
 		182D12D21D44A80400965ED1 /* dropdown_anim__00021@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182D12D11D44A80400965ED1 /* dropdown_anim__00021@2x.png */; };
-		182D12E41D4504ED00965ED1 /* ZHFontSize.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182D12E31D4504ED00965ED1 /* ZHFontSize.plist */; };
-		182D12E61D45052B00965ED1 /* ZHColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182D12E51D45052B00965ED1 /* ZHColor.plist */; };
 		182D12F41D450F0300965ED1 /* UIButton+ZHSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D12F31D450F0300965ED1 /* UIButton+ZHSkin.m */; };
 		182D12F71D450F1200965ED1 /* UIImageView+ZHSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D12F61D450F1200965ED1 /* UIImageView+ZHSkin.m */; };
 		182D12FA1D450F2B00965ED1 /* UILabel+ZHSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D12F91D450F2B00965ED1 /* UILabel+ZHSkin.m */; };
@@ -101,6 +99,8 @@
 		182D13041D45147300965ED1 /* UIColor+ZHSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D13031D45147300965ED1 /* UIColor+ZHSkin.m */; };
 		182D13081D45187200965ED1 /* UIImage+ZHSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D13071D45187200965ED1 /* UIImage+ZHSkin.m */; };
 		182D130B1D451BE900965ED1 /* ZHImageClipedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D130A1D451BE900965ED1 /* ZHImageClipedManager.m */; };
+		18325C351D708BFD0076B523 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 18325C321D708BFD0076B523 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		18325C361D708BFD0076B523 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18325C341D708BFD0076B523 /* UIView+SDAutoLayout.m */; };
 		183D09021D4C6078009D711A /* ColumnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D09011D4C6078009D711A /* ColumnModel.m */; };
 		183D09051D4C624F009D711A /* PagIngModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D09041D4C624F009D711A /* PagIngModel.m */; };
 		183D09A61D4E572B009D711A /* PieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D09A31D4E572B009D711A /* PieProgressView.m */; };
@@ -131,6 +131,7 @@
 		18601DD31D3B12F70014E35D /* MessagesImageNameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601DD21D3B12F70014E35D /* MessagesImageNameHandle.m */; };
 		18601DD61D3B13390014E35D /* MoreImageNameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601DD51D3B13390014E35D /* MoreImageNameHandle.m */; };
 		18601DD91D3B13900014E35D /* NotificationsImageNameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601DD81D3B13900014E35D /* NotificationsImageNameHandle.m */; };
+		189146D51D72862F000855B0 /* common.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 189146D41D72862F000855B0 /* common.bundle */; };
 		9C3AA807C158D954C85A70F0 /* libPods-ZhiHu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C1B5D334DD7E538C9AD9A7 /* libPods-ZhiHu.a */; };
 /* End PBXBuildFile section */
 
@@ -254,8 +255,6 @@
 		182D12D11D44A80400965ED1 /* dropdown_anim__00021@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00021@2x.png"; sourceTree = "<group>"; };
 		182D12E11D45040C00965ED1 /* ZHColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHColorConstants.h; sourceTree = "<group>"; };
 		182D12E21D45042900965ED1 /* ZHFontSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHFontSize.h; sourceTree = "<group>"; };
-		182D12E31D4504ED00965ED1 /* ZHFontSize.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZHFontSize.plist; sourceTree = "<group>"; };
-		182D12E51D45052B00965ED1 /* ZHColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZHColor.plist; sourceTree = "<group>"; };
 		182D12F21D450F0300965ED1 /* UIButton+ZHSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZHSkin.h"; sourceTree = "<group>"; };
 		182D12F31D450F0300965ED1 /* UIButton+ZHSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZHSkin.m"; sourceTree = "<group>"; };
 		182D12F51D450F1200965ED1 /* UIImageView+ZHSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZHSkin.h"; sourceTree = "<group>"; };
@@ -271,6 +270,11 @@
 		182D13091D451BE900965ED1 /* ZHImageClipedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHImageClipedManager.h; sourceTree = "<group>"; };
 		182D130A1D451BE900965ED1 /* ZHImageClipedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHImageClipedManager.m; sourceTree = "<group>"; };
 		182D130C1D451E9500965ED1 /* ZHImageCliped.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHImageCliped.h; sourceTree = "<group>"; };
+		18325C301D708BFD0076B523 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		18325C311D708BFD0076B523 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		18325C321D708BFD0076B523 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		18325C331D708BFD0076B523 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		18325C341D708BFD0076B523 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		183D09001D4C6078009D711A /* ColumnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnModel.h; sourceTree = "<group>"; };
 		183D09011D4C6078009D711A /* ColumnModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnModel.m; sourceTree = "<group>"; };
 		183D09031D4C624F009D711A /* PagIngModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagIngModel.h; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 		18601DDC1D3B17DC0014E35D /* ZHNotificationsImageConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHNotificationsImageConstants.h; sourceTree = "<group>"; };
 		18601DDD1D3B18260014E35D /* ZHDiscoveryImageConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHDiscoveryImageConstants.h; sourceTree = "<group>"; };
 		18601DDE1D3B18610014E35D /* ZHFeedImageConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHFeedImageConstants.h; sourceTree = "<group>"; };
+		189146D41D72862F000855B0 /* common.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = common.bundle; sourceTree = "<group>"; };
 		79F047ADECF52727691E23AF /* Pods-ZhiHu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiHu/Pods-ZhiHu.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C1B5D334DD7E538C9AD9A7 /* libPods-ZhiHu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhiHu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -556,6 +561,18 @@
 				182D13071D45187200965ED1 /* UIImage+ZHSkin.m */,
 			);
 			path = ImageCategory;
+			sourceTree = "<group>";
+		};
+		18325C2F1D708BFD0076B523 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				18325C301D708BFD0076B523 /* SDAutoLayout.h */,
+				18325C311D708BFD0076B523 /* UITableView+SDAutoTableViewCellHeight.h */,
+				18325C321D708BFD0076B523 /* UITableView+SDAutoTableViewCellHeight.m */,
+				18325C331D708BFD0076B523 /* UIView+SDAutoLayout.h */,
+				18325C341D708BFD0076B523 /* UIView+SDAutoLayout.m */,
+			);
+			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
 		18601D261D3A83EF0014E35D = {
@@ -1097,8 +1114,7 @@
 		18601DC31D3B10200014E35D /* GlobalConstants */ = {
 			isa = PBXGroup;
 			children = (
-				182D12E51D45052B00965ED1 /* ZHColor.plist */,
-				182D12E31D4504ED00965ED1 /* ZHFontSize.plist */,
+				189146D41D72862F000855B0 /* common.bundle */,
 				182D12421D43C4DF00965ED1 /* ZHConstants.h */,
 				182D12E11D45040C00965ED1 /* ZHColorConstants.h */,
 				182D12E21D45042900965ED1 /* ZHFontSize.h */,
@@ -1109,6 +1125,7 @@
 		18601DC41D3B10870014E35D /* CommenTool */ = {
 			isa = PBXGroup;
 			children = (
+				18325C2F1D708BFD0076B523 /* SDAutoLayout */,
 				182D12E71D45097100965ED1 /* Categray */,
 				1806AC6E1D3B784100972D44 /* ManagerTool */,
 				1806AC6D1D3B782D00972D44 /* ServiceTool */,
@@ -1258,6 +1275,7 @@
 				182D12951D44A44A00965ED1 /* dropdown_anim__0006@2x.png in Resources */,
 				182D12BA1D44A44A00965ED1 /* dropdown_anim__00044@2x.png in Resources */,
 				182D12D21D44A80400965ED1 /* dropdown_anim__00021@2x.png in Resources */,
+				189146D51D72862F000855B0 /* common.bundle in Resources */,
 				182D12B41D44A44A00965ED1 /* dropdown_anim__00038@2x.png in Resources */,
 				18601D421D3A83EF0014E35D /* LaunchScreen.storyboard in Resources */,
 				182D12BD1D44A44A00965ED1 /* dropdown_anim__00047@2x.png in Resources */,
@@ -1278,7 +1296,6 @@
 				182D12C91D44A44A00965ED1 /* dropdown_anim__00059@2x.png in Resources */,
 				1803F0251D4C3A0100E23484 /* Night_Now_Loading@2x.png in Resources */,
 				182D12A21D44A44A00965ED1 /* dropdown_anim__00019@2x.png in Resources */,
-				182D12E41D4504ED00965ED1 /* ZHFontSize.plist in Resources */,
 				183D09A91D4E5822009D711A /* Night_Now_Loading@2x.png in Resources */,
 				182D12CB1D44A44A00965ED1 /* dropdown_loading_01@2x.png in Resources */,
 				182D12C31D44A44A00965ED1 /* dropdown_anim__00053@2x.png in Resources */,
@@ -1318,7 +1335,6 @@
 				182D12C21D44A44A00965ED1 /* dropdown_anim__00052@2x.png in Resources */,
 				18601DA31D3A897A0014E35D /* ZHFeed.bundle in Resources */,
 				182D12911D44A44A00965ED1 /* dropdown_anim__0002@2x.png in Resources */,
-				182D12E61D45052B00965ED1 /* ZHColor.plist in Resources */,
 				1803F0291D4C3A0100E23484 /* Night_ZHInfinityBubbleAudioLoading@3x.png in Resources */,
 				1803F02D1D4C3A0100E23484 /* ZHInfinityBubbleAudioLoading@2x.png in Resources */,
 				182D12CD1D44A44A00965ED1 /* dropdown_loading_03@2x.png in Resources */,
@@ -1428,11 +1444,13 @@
 				182D124A1D449F6C00965ED1 /* ZHRefreshTableViewController.m in Sources */,
 				18601DD31D3B12F70014E35D /* MessagesImageNameHandle.m in Sources */,
 				1806AC931D3BE91000972D44 /* DataModel.m in Sources */,
+				18325C351D708BFD0076B523 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				1806AC741D3B785F00972D44 /* ZHBaseService.m in Sources */,
 				182D12FD1D450F3B00965ED1 /* UIView+ZHSkin.m in Sources */,
 				18601D341D3A83EF0014E35D /* main.m in Sources */,
 				18601DB41D3A8B620014E35D /* NotificationsViewController.m in Sources */,
 				182D12F71D450F1200965ED1 /* UIImageView+ZHSkin.m in Sources */,
+				18325C361D708BFD0076B523 /* UIView+SDAutoLayout.m in Sources */,
 				183D09021D4C6078009D711A /* ColumnModel.m in Sources */,
 				18601DB71D3A8B730014E35D /* MessagesViewController.m in Sources */,
 				182D13041D45147300965ED1 /* UIColor+ZHSkin.m in Sources */,

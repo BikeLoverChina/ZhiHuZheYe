@@ -9,6 +9,7 @@
 #import "UIView+ZHSkin.h"
 #import <objc/runtime.h>
 #import "ZHImageCliped.h"
+#import "ZHSkinManager.h"
 
 @interface _ZHCornerImage : NSObject
 
@@ -177,7 +178,56 @@ static const char *s_zh_image_pathColorKey = "s_zh_image_pathColorKey";
 static const char *s_zh_image_pathWidthKey = "s_zh_image_pathWidthKey";
 static const char *s_zh_image_shouldRefreshCache = "s_zh_image_shouldRefreshCache";
 
-@implementation UIView (ZHImageCliped)
+@implementation UIView (ZHSkin)
+
+#pragma mark - backgroundColorKey
+
+@dynamic backgroundColorKey;
+static char kPropertyBackgroundKey;
+
+- (void)setBackgroundColorKey:(NSString *)backgroundColorKey
+{
+    objc_setAssociatedObject(self, &kPropertyBackgroundKey, backgroundColorKey, OBJC_ASSOCIATION_COPY);
+    [self changeBackgroundColor];
+}
+
+- (NSString *)backgroundColorKey
+{
+    return objc_getAssociatedObject(self, &kPropertyBackgroundKey);
+}
+
+#pragma mark - borderColorKey
+
+@dynamic borderColorKey;
+static char kPropertyBorderColorKey;
+
+- (void)setBorderColorKey:(NSString *)borderColorKey
+{
+    if (borderColorKey != [self borderColorKey]) {
+        objc_setAssociatedObject(self, &kPropertyBorderColorKey, borderColorKey, OBJC_ASSOCIATION_COPY);
+        [self changeBorderColor];
+    }
+}
+
+- (NSString *)borderColorKey
+{
+    return objc_getAssociatedObject(self, &kPropertyBorderColorKey);
+}
+
+- (void)changeBackgroundColor
+{
+    if (self.backgroundColorKey) {
+        self.backgroundColor = [[ZHSkinManager sharedManager] colorWithColorKey:self.backgroundColorKey];
+        
+    }
+}
+
+- (void)changeBorderColor
+{
+    if (self.borderColorKey) {
+        self.layer.borderColor = [[ZHSkinManager sharedManager] colorWithColorKey:self.borderColorKey].CGColor;
+    }
+}
 
 - (BOOL)zh_shouldRefreshCache {
     NSNumber *shouldRefresh = objc_getAssociatedObject(self, s_zh_image_shouldRefreshCache);

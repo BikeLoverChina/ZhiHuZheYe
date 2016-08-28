@@ -59,8 +59,10 @@
     NSString *mainBundlePath = [[NSBundle mainBundle]bundlePath];
     //指定的bundle是否在main bundle中
     NSString *bundlePath = [[mainBundlePath stringByAppendingPathComponent:bundleName] stringByAppendingPathExtension:@"bundle"];
+    //添加当前主题的路径
+    NSString *bundlePathWithSkin = [[bundlePath stringByAppendingPathComponent:_skinName]stringByAppendingPathExtension:@"bundle"];
     
-    image = [self imageWithImageKey:key inBundlePath:bundlePath];
+    image = [self imageWithImageKey:key inBundlePath:bundlePathWithSkin];
     return image;
 }
 
@@ -81,6 +83,25 @@
     }
     return [UIColor blackColor];
     
+}
+
+- (UIFont *)fontForNameKey:(NSString*)nameKey sizeKey:(NSString *)sizeKey
+{
+    NSString *size = self.attributesDic[sizeKey];
+    NSString *fontName = self.attributesDic[nameKey];
+    if (nameKey) {
+        if (self.attributesDic[nameKey]) {
+            fontName = self.attributesDic[nameKey];
+        }
+    }
+    if (sizeKey) {
+        if (self.attributesDic[sizeKey]) {
+            size = self.attributesDic[sizeKey];
+        }
+    }
+    
+    UIFont * font = [UIFont fontWithName:fontName size:size.floatValue];
+    return font ? font : [UIFont systemFontOfSize:size.floatValue];
 }
 
 - (void)updateFontAndTextColorDictionary;
