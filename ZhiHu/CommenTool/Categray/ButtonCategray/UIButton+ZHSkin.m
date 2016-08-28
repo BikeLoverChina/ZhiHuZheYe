@@ -34,7 +34,8 @@ ADD_DYNAMIC_PROPERTY(NSString *, titleColorHighlightedKey, setTitleColorHighligh
 
 - (void)setImageKey:(NSString *)key forState:(UIControlState)state
 {
-    [self setImage:[[ZHSkinManager sharedManager] imageWithImageKey:key] forState:state];
+    UIImage *image = [[ZHSkinManager sharedManager] imageWithImageKey:key];
+    [self setImage:image forState:state];
 }
 
 - (void)setBackgroundColorKey:(NSString *)key forState:(UIControlState)state

@@ -10,11 +10,26 @@
 #import "ZHBaseService.h"
 #import "ZHRefreshTableViewController.h"
 #import "ZHConstants.h"
+#import "ZHAdapterConstants.h"
+#import "ZHUISkinConstants.h"
+#import "UIView+ZHSkin.h"
+#import "UIButton+ZHSkin.h"
+#import "UILabel+ZHSkin.h"
+#import "UIImage+ZHSkin.h"
+#import "UIImageView+ZHSkin.h"
+#import "ZHFeedImageConstants.h"
 #import "FeedListService.h"
 #import "SDAutoLayout.h"
+#import "FeedImageNameHandle.h"
+#import "TopPicBottomTextCell.h"
+#import "DataModel.h"
 
 #define CONTENTINSET_BOTTOM 45
 #define CONTENTINSET_TOP    44
+
+#define ZHFeedSearchTitle @"搜索问答、文章、话题、或用户"
+
+static NSString *cellIdentifier = @"cellIdentifier";
 
 @interface FeedViewController () <UISearchBarDelegate, BaseServiceDelegate>
 
@@ -30,6 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    [self.zhTableView registerClass:[TopPicBottomTextCell class] forCellReuseIdentifier:cellIdentifier];
     
     [self initTableView];
     [self initData];
@@ -40,8 +56,8 @@
 - (void)initTableView
 {
     self.zhTableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [self.zhTableView setBackgroundColor:[UIColor yellowColor]];
-    self.contentInset = UIEdgeInsetsMake(0, 0, CONTENTINSET_BOTTOM, 0);
+    self.zhTableView.backgroundColorKey = ZHcolor08;
+    self.contentInset = UIEdgeInsetsMake(IOS7_STATUS_BAR_HEGHT+NavigationBar_HEIGHT, 0, CONTENTINSET_BOTTOM, 0);
     [self.view addSubview:self.zhTableView];
 }
 
@@ -58,12 +74,57 @@
 
 - (void)initSearchView
 {
-    self.searchBgView = [[UIView alloc] initWithFrame:CGRectMake(0, IOS7_STATUS_BAR_HEGHT, SCREEN_WIDTH, 44)];
+    // 背景图
+    self.searchBgView = [[UIView alloc] init];
+    [self.view addSubview:self.searchBgView];
+    self.searchBgView.backgroundColorKey = ZHcolor09;
+    
+    // 搜索按钮
     self.searchButton = [[UIButton alloc] init];
     [self.searchBgView addSubview:self.searchButton];
     [self.searchButton addTarget:self action:@selector(searchButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-//    self.searchBar.placeholder = @"搜索问答、文章、话题、或用户";
-    [self.view addSubview:self.searchBgView];
+    self.searchButton.layer.cornerRadius = 3.0;
+    self.searchButton.layer.masksToBounds = YES;
+    self.searchButton.backgroundColorKey = ZHcolor18;
+    // 搜索图片
+    UIImageView *searchImg = [[UIImageView alloc] init];
+    [searchImg setImageKey:[FeedImageNameHandle handleImageName:ZHSearchHistoryIcon]];
+    [self.searchButton addSubview:searchImg];
+    // 搜索标题
+    UILabel *searchTitleLbl = [[UILabel alloc] init];
+    searchTitleLbl.text = ZHFeedSearchTitle;
+    searchTitleLbl.fontSizeKey = ZHtextsize04;
+    searchTitleLbl.textColorKey = ZHcolor05;
+    [self.searchButton addSubview:searchTitleLbl];
+    
+    self.searchBgView.sd_layout
+    .leftSpaceToView(self.view, ZHUIMargin0)
+    .rightSpaceToView(self.view, ZHUIMargin0)
+    .topSpaceToView(self.view, ZHUIMargin0)
+    .heightIs(IOS7_STATUS_BAR_HEGHT+NavigationBar_HEIGHT);
+    
+    self.searchButton.sd_layout
+    .leftSpaceToView(self.searchBgView, ZHUIMargin10)
+    .rightSpaceToView(self.searchBgView, ZHUIMargin10)
+    .bottomSpaceToView(self.searchBgView, ZHUIMargin10)
+    .heightIs(ZHUIMargin25);
+    
+    CGFloat searchLblTitleW = [UILabel calcLableWidth:searchTitleLbl withMaxHeight:ZHUIMargin30];
+    CGFloat searchImgWH = 15.0;
+    CGFloat searcLblRMargin = 10.0;
+    CGFloat searchImgLeftMargin = (SCREEN_WIDTH-ZHUIMargin10*2-searchImgWH-searcLblRMargin-searchLblTitleW)*0.5;
+    
+    searchImg.sd_layout
+    .leftSpaceToView(self.searchButton, searchImgLeftMargin)
+    .topSpaceToView(self.searchButton, (ZHUIMargin25-searchImgWH)*0.5)
+    .heightIs(searchImgWH)
+    .widthIs(searchImgWH);
+    
+    searchTitleLbl.sd_layout
+    .leftSpaceToView(searchImg, ZHUIMargin10)
+    .topSpaceToView(self.searchButton, ZHUIMargin0)
+    .heightIs(ZHUIMargin25)
+    .widthIs(searchLblTitleW);
 }
 
 #pragma mark- Click
@@ -91,7 +152,8 @@
 {
     [self.dataArray removeAllObjects];
     for (int i = 0; i < 10; i++) {
-        [self.dataArray addObject:[NSString stringWithFormat:@"Hello -- %d",rand()]];
+        DataModel *model = [[DataModel alloc] init];
+        [self.dataArray addObject:model];
     }
     [self.zhTableView reloadData];
 }
@@ -99,7 +161,8 @@
 - (void)showMore
 {
     for (int i = 0; i < 10; i++) {
-        [self.dataArray addObject:[NSString stringWithFormat:@"Good -- %d",rand()]];
+        DataModel *model = [[DataModel alloc] init];
+        [self.dataArray addObject:model];
     }
     [self.zhTableView reloadData];
 }
@@ -108,7 +171,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    DataModel *model = self.dataArray[indexPath.row];
+    CGFloat height = [self.zhTableView cellHeightForIndexPath:indexPath model:model keyPath:@"dataModel" cellClass:[TopPicBottomTextCell class] contentViewWidth:SCREEN_WIDTH];
+    return height;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -118,12 +183,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    TopPicBottomTextCell *cell = (TopPicBottomTextCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[TopPicBottomTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+
+    DataModel *model = self.dataArray[indexPath.row];
+    [cell setDataModel:model];
+    
     return cell;
 }
 
@@ -140,7 +207,8 @@
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
         for (int i = 0 ; i < 30; i++) {
-            [_dataArray addObject:[NSString stringWithFormat:@"Test title -- %d",i]];
+            DataModel *model = [[DataModel alloc] init];
+            [_dataArray addObject:model];
         }
     }
     return _dataArray;

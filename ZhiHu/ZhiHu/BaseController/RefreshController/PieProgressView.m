@@ -7,6 +7,7 @@
 //
 
 #import "PieProgressView.h"
+#import "UIColor+ZHSkin.h"
 
 @interface PieProgressView ()
 
@@ -35,7 +36,8 @@
     CGFloat radius = MIN(rect.size.width * 0.5, rect.size.height * 0.5);
     
     // 背景遮罩
-    [ZHProgressViewBackgroundColor set];
+//    [ZHProgressViewBackgroundColor set];
+    [[UIColor colorWithHexString:@"#f0eff5"] set];
     CGFloat lineW = MAX(rect.size.width, rect.size.height) * 0.5;
     CGContextSetLineWidth(ctx, lineW);
     CGContextAddArc(ctx, xCenter, yCenter, radius + lineW * 0.5 + 5, 0, M_PI * 2, 1);
@@ -52,4 +54,7 @@
     
     CGContextFillPath(ctx);
 }
+
+
+
 @end

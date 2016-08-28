@@ -105,7 +105,6 @@
 		183D09051D4C624F009D711A /* PagIngModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D09041D4C624F009D711A /* PagIngModel.m */; };
 		183D09A61D4E572B009D711A /* PieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D09A31D4E572B009D711A /* PieProgressView.m */; };
 		183D09A71D4E572B009D711A /* ZHBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D09A51D4E572B009D711A /* ZHBaseProgressView.m */; };
-		183D09A91D4E5822009D711A /* Night_Now_Loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D09A81D4E5822009D711A /* Night_Now_Loading@2x.png */; };
 		18601D341D3A83EF0014E35D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601D331D3A83EF0014E35D /* main.m */; };
 		18601D371D3A83EF0014E35D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601D361D3A83EF0014E35D /* AppDelegate.m */; };
 		18601D3A1D3A83EF0014E35D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601D391D3A83EF0014E35D /* ViewController.m */; };
@@ -132,6 +131,9 @@
 		18601DD61D3B13390014E35D /* MoreImageNameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601DD51D3B13390014E35D /* MoreImageNameHandle.m */; };
 		18601DD91D3B13900014E35D /* NotificationsImageNameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18601DD81D3B13900014E35D /* NotificationsImageNameHandle.m */; };
 		189146D51D72862F000855B0 /* common.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 189146D41D72862F000855B0 /* common.bundle */; };
+		189146DA1D72DC74000855B0 /* TopPicBottomTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189146D91D72DC74000855B0 /* TopPicBottomTextCell.m */; };
+		189146DD1D72DCB6000855B0 /* TopBottomTextCenterPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189146DC1D72DCB6000855B0 /* TopBottomTextCenterPicCell.m */; };
+		189146E01D72DCEC000855B0 /* TopTitleBottomSubTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189146DF1D72DCEC000855B0 /* TopTitleBottomSubTitleCell.m */; };
 		9C3AA807C158D954C85A70F0 /* libPods-ZhiHu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C1B5D334DD7E538C9AD9A7 /* libPods-ZhiHu.a */; };
 /* End PBXBuildFile section */
 
@@ -283,7 +285,6 @@
 		183D09A31D4E572B009D711A /* PieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieProgressView.m; sourceTree = "<group>"; };
 		183D09A41D4E572B009D711A /* ZHBaseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBaseProgressView.h; sourceTree = "<group>"; };
 		183D09A51D4E572B009D711A /* ZHBaseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBaseProgressView.m; sourceTree = "<group>"; };
-		183D09A81D4E5822009D711A /* Night_Now_Loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Now_Loading@2x.png"; sourceTree = "<group>"; };
 		18601D2F1D3A83EF0014E35D /* ZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiHu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18601D331D3A83EF0014E35D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18601D351D3A83EF0014E35D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -335,6 +336,14 @@
 		18601DDD1D3B18260014E35D /* ZHDiscoveryImageConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHDiscoveryImageConstants.h; sourceTree = "<group>"; };
 		18601DDE1D3B18610014E35D /* ZHFeedImageConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHFeedImageConstants.h; sourceTree = "<group>"; };
 		189146D41D72862F000855B0 /* common.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = common.bundle; sourceTree = "<group>"; };
+		189146D61D72BE48000855B0 /* ZHUISkinConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHUISkinConstants.h; sourceTree = "<group>"; };
+		189146D71D72C31E000855B0 /* ZHAdapterConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHAdapterConstants.h; sourceTree = "<group>"; };
+		189146D81D72DC74000855B0 /* TopPicBottomTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPicBottomTextCell.h; sourceTree = "<group>"; };
+		189146D91D72DC74000855B0 /* TopPicBottomTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPicBottomTextCell.m; sourceTree = "<group>"; };
+		189146DB1D72DCB6000855B0 /* TopBottomTextCenterPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopBottomTextCenterPicCell.h; sourceTree = "<group>"; };
+		189146DC1D72DCB6000855B0 /* TopBottomTextCenterPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopBottomTextCenterPicCell.m; sourceTree = "<group>"; };
+		189146DE1D72DCEC000855B0 /* TopTitleBottomSubTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopTitleBottomSubTitleCell.h; sourceTree = "<group>"; };
+		189146DF1D72DCEC000855B0 /* TopTitleBottomSubTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopTitleBottomSubTitleCell.m; sourceTree = "<group>"; };
 		79F047ADECF52727691E23AF /* Pods-ZhiHu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiHu/Pods-ZhiHu.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C1B5D334DD7E538C9AD9A7 /* libPods-ZhiHu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhiHu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -578,8 +587,6 @@
 		18601D261D3A83EF0014E35D = {
 			isa = PBXGroup;
 			children = (
-				183D09A81D4E5822009D711A /* Night_Now_Loading@2x.png */,
-				18601DC21D3B0FF10014E35D /* Config */,
 				18601DC31D3B10200014E35D /* GlobalConstants */,
 				18601D661D3A86830014E35D /* ZHFeed */,
 				18601D651D3A86830014E35D /* ZHDiscover */,
@@ -589,11 +596,6 @@
 				18601DC11D3B0F9F0014E35D /* ThirdControl */,
 				18601DC41D3B10870014E35D /* CommenTool */,
 				18601D311D3A83EF0014E35D /* ZhiHu */,
-				18601D4B1D3A83EF0014E35D /* ZhiHuTests */,
-				18601D561D3A83EF0014E35D /* ZhiHuUITests */,
-				18601D301D3A83EF0014E35D /* Products */,
-				3C2D537A3610C4AB81E10403 /* Pods */,
-				1ADAF2035DFAD71B2DEDFB43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -605,6 +607,7 @@
 				18601D531D3A83EF0014E35D /* ZhiHuUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		18601D311D3A83EF0014E35D /* ZhiHu */ = {
@@ -622,7 +625,12 @@
 				18601D3E1D3A83EF0014E35D /* Assets.xcassets */,
 				18601D401D3A83EF0014E35D /* LaunchScreen.storyboard */,
 				18601D431D3A83EF0014E35D /* Info.plist */,
+				1ADAF2035DFAD71B2DEDFB43 /* Frameworks */,
+				3C2D537A3610C4AB81E10403 /* Pods */,
+				18601D561D3A83EF0014E35D /* ZhiHuUITests */,
+				18601D301D3A83EF0014E35D /* Products */,
 				18601D321D3A83EF0014E35D /* Supporting Files */,
+				18601D4B1D3A83EF0014E35D /* ZhiHuTests */,
 			);
 			path = ZhiHu;
 			sourceTree = "<group>";
@@ -642,7 +650,7 @@
 				18601D4E1D3A83EF0014E35D /* Info.plist */,
 			);
 			path = ZhiHuTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		18601D561D3A83EF0014E35D /* ZhiHuUITests */ = {
 			isa = PBXGroup;
@@ -651,7 +659,7 @@
 				18601D591D3A83EF0014E35D /* Info.plist */,
 			);
 			path = ZhiHuUITests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		18601D651D3A86830014E35D /* ZHDiscover */ = {
 			isa = PBXGroup;
@@ -780,6 +788,12 @@
 		18601D701D3A87B10014E35D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				189146D81D72DC74000855B0 /* TopPicBottomTextCell.h */,
+				189146D91D72DC74000855B0 /* TopPicBottomTextCell.m */,
+				189146DB1D72DCB6000855B0 /* TopBottomTextCenterPicCell.h */,
+				189146DC1D72DCB6000855B0 /* TopBottomTextCenterPicCell.m */,
+				189146DE1D72DCEC000855B0 /* TopTitleBottomSubTitleCell.h */,
+				189146DF1D72DCEC000855B0 /* TopTitleBottomSubTitleCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1104,13 +1118,6 @@
 			path = ThirdControl;
 			sourceTree = "<group>";
 		};
-		18601DC21D3B0FF10014E35D /* Config */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 		18601DC31D3B10200014E35D /* GlobalConstants */ = {
 			isa = PBXGroup;
 			children = (
@@ -1118,6 +1125,8 @@
 				182D12421D43C4DF00965ED1 /* ZHConstants.h */,
 				182D12E11D45040C00965ED1 /* ZHColorConstants.h */,
 				182D12E21D45042900965ED1 /* ZHFontSize.h */,
+				189146D61D72BE48000855B0 /* ZHUISkinConstants.h */,
+				189146D71D72C31E000855B0 /* ZHAdapterConstants.h */,
 			);
 			path = GlobalConstants;
 			sourceTree = "<group>";
@@ -1141,6 +1150,7 @@
 				F8C1B5D334DD7E538C9AD9A7 /* libPods-ZhiHu.a */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3C2D537A3610C4AB81E10403 /* Pods */ = {
@@ -1150,6 +1160,7 @@
 				03128439CA8C600B9D79D0E6 /* Pods-ZhiHu.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1296,7 +1307,6 @@
 				182D12C91D44A44A00965ED1 /* dropdown_anim__00059@2x.png in Resources */,
 				1803F0251D4C3A0100E23484 /* Night_Now_Loading@2x.png in Resources */,
 				182D12A21D44A44A00965ED1 /* dropdown_anim__00019@2x.png in Resources */,
-				183D09A91D4E5822009D711A /* Night_Now_Loading@2x.png in Resources */,
 				182D12CB1D44A44A00965ED1 /* dropdown_loading_01@2x.png in Resources */,
 				182D12C31D44A44A00965ED1 /* dropdown_anim__00053@2x.png in Resources */,
 				182D12961D44A44A00965ED1 /* dropdown_anim__0007@2x.png in Resources */,
@@ -1422,6 +1432,7 @@
 				183D09051D4C624F009D711A /* PagIngModel.m in Sources */,
 				183D09A61D4E572B009D711A /* PieProgressView.m in Sources */,
 				18601DB11D3A8B4D0014E35D /* DiscoverViewController.m in Sources */,
+				189146E01D72DCEC000855B0 /* TopTitleBottomSubTitleCell.m in Sources */,
 				1806AC7E1D3BDF6100972D44 /* ActorModel.m in Sources */,
 				182D12D01D44A49900965ED1 /* ZHRefreshHeaderView.m in Sources */,
 				182D130B1D451BE900965ED1 /* ZHImageClipedManager.m in Sources */,
@@ -1437,6 +1448,7 @@
 				183D09A71D4E572B009D711A /* ZHBaseProgressView.m in Sources */,
 				18601D3A1D3A83EF0014E35D /* ViewController.m in Sources */,
 				1806AC8A1D3BE49E00972D44 /* TargetModel.m in Sources */,
+				189146DD1D72DCB6000855B0 /* TopBottomTextCenterPicCell.m in Sources */,
 				1806AC711D3B784100972D44 /* ZHSkinManager.m in Sources */,
 				1806AC8D1D3BE70C00972D44 /* QuestionModel.m in Sources */,
 				18601D371D3A83EF0014E35D /* AppDelegate.m in Sources */,
@@ -1454,6 +1466,7 @@
 				183D09021D4C6078009D711A /* ColumnModel.m in Sources */,
 				18601DB71D3A8B730014E35D /* MessagesViewController.m in Sources */,
 				182D13041D45147300965ED1 /* UIColor+ZHSkin.m in Sources */,
+				189146DA1D72DC74000855B0 /* TopPicBottomTextCell.m in Sources */,
 				1806AC901D3BE78D00972D44 /* CanCommentModel.m in Sources */,
 				1806AC7B1D3BDD2C00972D44 /* FeedListService.m in Sources */,
 			);
